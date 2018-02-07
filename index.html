@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>E-motion - Главная страница</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<header class="header">
+
+		<div class="header__menu" id="header">
+			<div class="container_center">
+
+				<div class="header__menu_left">
+					<a href="/" class="logo"><img src="img/logo.png" alt="" class="logo__img"></a>
+
+					<button class="header__mobile btn">
+						<img src="img/mobile-menu.svg" alt="">
+					</button>
+				</div>
+
+				<div class="header__menu_right">
+					<!-- begin navbar  -->
+					<ul class="navbar ">
+						<li class="navbar__item">
+							<a href="#about" class="navbar__link active">о компании</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#tarif" class="navbar__link">тарифы</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#jobs" class="navbar__link">правила проката</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#map" class="navbar__link">карта станций</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#contact" class="navbar__link">контакты</a>
+						</li>
+					</ul>
+					<!-- end navbar  -->
+
+					<a href="tel:+79782595012" class="btn header__btn">позвонить нам</a>
+				</div>
+				
+			</div>
+		</div><!-- .header-menu-->
+
+		<div class="header__down">
+			<div class="header__down_in">
+				<div class="container_center">
+					<div class="header__down_wrap">
+						<div class="header__down_top">
+							<button class="header__down_btn">
+								<img src="img/h-btn1.png" alt="">
+							</button>
+							<button class="header__down_btn">
+								<img src="img/h-btn2.png" alt="">
+							</button>
+						</div>
+						<div class="header__down_reg">
+							<div class="header__down_reg_h">Сеть проката электросамокатов</div>
+							<div class="header__down_reg_p">Автоматизированный прокат легкого электротранспорта - один из шагов к превращению Вашего Города в город будущего, комфортный для жителей и гостей.</div>
+							<btn class="btn btn__warning header__down_reg_btn">регистрация</btn>
+						</div>
+						
+						<form class="header__sighup">
+							<h2 class="header__sighup_h2">регистрация</h2>						
+							<input type="text" name="name" placeholder="Имя" class="write__input">
+							<input type="email" name="email" placeholder="Электронная почта" class="write__input">
+							<input type="text" name="passport" placeholder="Серия и номер паспорта" class="write__input">
+							<a href="#" class="btn write__btn">отправить</a>
+						</form><!-- .header__sighup -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .header__down -->
+		
+	</header><!-- .header-->
+	
+	<!-- begin main__content -->
+	<main class="main__content">
+
+		<div id="about" class="about">
+			<div class="container_center">
+				<div class="about__in">
+					<div class="about__text">
+						<h2 class="about__h2">О нас</h2>
+						<p class="about__p">ООО "Э-МОУШЕН" предлагает услуги автоматизированного проката электрических самокатов и велосипедов. Оригинальные разработки компании позволяют заряжать аккумуляторные батареи любых электросамокатов и электровелосипедов. <br>Процесс получения самоката или велосипеда в аренду полностью автоматизирован, клиенту нужно скачать мобильное приложение и пройти регистрацию.</p>
+					</div>
+					<div class="about__img"><img src="img/about-img.png" alt="" class=""about__img_img"></div>
+				</div>
+			</div>
+		</div><!-- .about-->
+	
+		<div class="reason">
+			<div class="container_center">
+				<h2>почему электросамокат?</h2>
+				<div class="reason__wrapper">
+					<div class="reason__left">
+						<div class="reason__item">
+							<div class="reason__item_left grid__item">
+								<img src="img/reazon-img1.jpg" alt="">
+								<div class="reason__arrow"></div>
+								<div class="reason__icon"></div>
+							</div>
+							<div class="reason__item_right grid__item">
+								<div class="reason__content">
+									<h4>удовольствие от прогулки</h4>
+									<p>семейное развлечение быстрое перемещение, удовольствие от движения</p>
+								</div>
+							</div>
+						</div>
+						<div class="reason__item">
+							<div class="reason__item_right grid__item">
+								<div class="reason__content">
+									<h4>Экологичность</h4>
+									<p>автомобилистам - решение проблемы «последней мили» в центре города</p>
+								</div>
+							</div>
+							<div class="reason__item_left grid__item">
+								<img src="img/reazon-img2.jpg" alt="">
+								<div class="reason__arrow"></div>
+								<div class="reason__icon"></div>
+							</div>
+						</div>
+					</div>
+					<div class="reason__right">
+						<div class="reason__item reason__right_top">
+							<div class="reason__item_top">
+								<img src="img/reazon-img3.jpg" alt="">
+								<div class="reason__arrow"></div>
+								<div class="reason__icon"></div>
+							</div>
+						</div>
+						<div class="reason__item reason__right_bottom">
+							<div class="reason__item_down">
+								<div class="reason__content">
+									<h4>легкость</h4>
+									<p>с маневренным самокатом можно зайти в кафе пронести по лестнице</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .reason-->
+
+		<div id="tarif" class="rates">
+			<div class="container_center">
+				<h2>тарифы</h2>
+				<div class="rates__list">
+					<div class="rates__list_grid grid grid__3">
+						<div class="rates__item">
+							<div class="rates__wrap">
+								<h4>Базовый</h4>
+								<div class="rates__name"> “5 минут”</div>
+								<p>5 минут - 50 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
+							</div>
+						</div>
+						<div class="rates__item">
+							<div class="rates__wrap">
+								<h4>Базовый</h4>
+								<div class="rates__name"> “30 минут”</div>
+								<p>30 минут - 300 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
+							</div>
+						</div>
+						<div class="rates__item">
+							<div class="rates__wrap">
+								<h4>Базовый</h4>
+								<div class="rates__name"> “60 минут”</div>
+								<p>60 минут - 600 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .rates-->
+
+		<div id="jobs" class="jobs">
+			<div class="container_center">
+				<h2>как это работает?</h2>
+				<div class="jobs__wrap">
+					<div class="jobs__strip">
+						<div class="jobs__hstrip"></div>
+						<div class="jobs__list grid grid__4">
+							<div class="jobs__item">
+								<div class="jobs__step">
+									1
+									<div class="jobs__vstrip"></div>
+								</div>
+								<div class="jobs__img_wrap">
+									<div class="jobs__img">
+										<img src="img/i4.svg" alt="" class="jobs__img_img">
+									</div>							
+								</div>
+								<div class="jobs__p">Скачать мобильное приложение</div>
+							</div>
+							<div class="jobs__item">
+								<div class="jobs__step">
+									2
+									<div class="jobs__vstrip"></div>
+								</div>
+								<div class="jobs__img_wrap">
+									<div class="jobs__img">
+										<img src="img/i5.svg" alt="" class="jobs__img_img">
+									</div>							
+								</div>
+								<div class="jobs__p">Пройти регистрацию</div>
+							</div>
+							<div class="jobs__item">
+								<div class="jobs__step">
+									3
+									<div class="jobs__vstrip"></div>
+								</div>
+								<div class="jobs__img_wrap">
+									<div class="jobs__img">
+										<img src="img/i6.svg" alt="" class="jobs__img_img">
+									</div>							
+								</div>
+								<div class="jobs__p">Найти место расположения ближайших станций проката</div>
+							</div>
+							<div class="jobs__item">
+								<div class="jobs__step">
+									4
+									<div class="jobs__vstrip"></div>
+								</div>
+								<div class="jobs__img_wrap">
+									<div class="jobs__img">
+										<img src="img/i7.svg" alt="" class="jobs__img_img">
+									</div>							
+								</div>
+								<div class="jobs__p">Наслаждаться прогулкой</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .jobs-->
+
+		<div class="container_center">
+
+			<div class="travel">
+				<h2>Путешествуй!</h2>
+				<div class="travel__list_wrap">
+					<div class="travel__list grid grid__4">
+						<div class="travel__item">
+							<a href="agreement.html" class="travel__btn btn">договор</a>
+						</div>
+						<div class="travel__item">
+							<a href="#" class="travel__btn btn download__menu_trigger">Приложения <br>к договору <img src="img/caret.svg" alt="" class="caret"></a>
+							<ul class="download__menu">
+								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 1</a></li>
+								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 2</a></li>
+								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 3</a></li>
+								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 4</a></li>
+							</ul>
+						</div>
+						<div class="travel__item">
+							<a href="#" class="travel__btn btn">Инструкция <br>Ninebot KickScooter</a>
+						</div>
+						<div class="travel__item">
+							<a href="#" class="travel__btn btn">Вопросы <br>и ответы</a>
+						</div>
+					</div>
+				</div>
+			</div><!-- .travel-->
+		
+		</div>
+
+		<div class="map">
+			<div id="map" class="map__wrap"></div>
+			<h2 class="map__h2">карта станций проката</h2>
+			<div class="map__content">
+				<div class="map__right_wrap">
+				</div>
+			</div>
+		</div><!-- .map-->
+
+		<div class="container_center">
+
+			<div class="schedule">
+				<div class="schedule__p">Станции проката электросамокатов работают ежедневно 24 часа в сутки.</div>
+				<div class="schedule__p">Работа станций проката приостанавливается при снижении температуры окружающей среды ниже 10 градусов Цельсия.</div>
+			</div><!-- .schedule-->
+
+		</div>
+
+		<div id="contact" class="write">
+			<div class="container_center">
+				<div class="write__in">
+					<form class="write__form">
+						<h2 class="write__h2">напишите нам!</h2>
+						<input type="text" name="name" placeholder="Имя" class="write__input">
+						<input type="email" name="email" placeholder="Электронная почта" class="write__input">
+						<textarea name="message" placeholder="Сообщение" class="write__textarea"></textarea>
+						<a href="#" class="btn write__btn">отправить</a>
+					</form>
+				</div>
+			</div>
+		</div><!-- .write-->
+
+	</main>
+	<!-- end main__content -->
+
+</div>
+<!-- end .wrapper -->
+
+<!-- begin footer -->
+<footer class="footer">
+
+	<div class="footer__main">
+		<div class="container_center">
+
+			<div class="footer__content">
+				<div class="footer__left">
+					<div class="footer__p">телефон <a href="tel:+79782595012" class="footer__link">+7 978 259 50 12</a> <br>e-mail диспетчера системы: <a href="mailto:info@e-motion24.ru" class="footer__link">info@e-motion24.ru</a></div>
+					<div class="footer__p">Адрес: 191014 город Санкт-Петербург, <br>пр. Литейный, дом 51, литера А, помещение 14-Н Р.М.8</div>
+				</div>
+				<div class="footer__right">
+					<div class="footer__p">ООО "Э-МОУШЕН" <br>ОГРН 1177847362021 ИНН 7841067341 КПП 784101001</div>
+					<div class="footer__p last">Дата регистрации 09.11.2017</div>
+				</div>
+				<div class="footer__soc">
+					<a href="#"><img src="img/soc1.svg" alt="" class="footer__img"></a>
+					<a href="#"><img src="img/soc2.svg" alt="" class="footer__img"></a>
+					<a href="#"><img src="img/soc3.svg" alt="" class="footer__img"></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</footer>
+<!-- end footer -->
+
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="//yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/groups.js" type="text/javascript"></script>
+
+</body>
+</html>
