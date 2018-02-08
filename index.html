@@ -7,6 +7,8 @@
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -18,7 +20,7 @@
 <body>
 
 <div class="wrapper">
-
+	
 	<header class="header">
 
 		<div class="header__menu" id="header">
@@ -45,7 +47,7 @@
 							<a href="#jobs" class="navbar__link">правила проката</a>
 						</li>
 						<li class="navbar__item">
-							<a href="#map" class="navbar__link">карта станций</a>
+							<a href="#map-box" class="navbar__link">карта станций</a>
 						</li>
 						<li class="navbar__item">
 							<a href="#contact" class="navbar__link">контакты</a>
@@ -59,17 +61,21 @@
 			</div>
 		</div><!-- .header-menu-->
 
+	</header><!-- .header-->
+	
+	<div id="about">
+
 		<div class="header__down">
 			<div class="header__down_in">
 				<div class="container_center">
 					<div class="header__down_wrap">
 						<div class="header__down_top">
-							<button class="header__down_btn">
+							<!-- <a href="#" class="header__down_btn">
 								<img src="img/h-btn1.png" alt="">
-							</button>
-							<button class="header__down_btn">
+							</a>
+							<a href="#" class="header__down_btn">
 								<img src="img/h-btn2.png" alt="">
-							</button>
+							</a> -->
 						</div>
 						<div class="header__down_reg">
 							<div class="header__down_reg_h">Сеть проката электросамокатов</div>
@@ -78,10 +84,11 @@
 						</div>
 						
 						<form class="header__sighup">
+							<div class="close"></div>
 							<h2 class="header__sighup_h2">регистрация</h2>						
 							<input type="text" name="name" placeholder="Имя" class="write__input">
-							<input type="email" name="email" placeholder="Электронная почта" class="write__input">
 							<input type="text" name="passport" placeholder="Серия и номер паспорта" class="write__input">
+							<input type="text" name="phone" placeholder="Номер телефона" class="write__input">
 							<a href="#" class="btn write__btn">отправить</a>
 						</form><!-- .header__sighup -->
 					</div>
@@ -89,12 +96,7 @@
 			</div>
 		</div><!-- .header__down -->
 		
-	</header><!-- .header-->
-	
-	<!-- begin main__content -->
-	<main class="main__content">
-
-		<div id="about" class="about">
+		<div class="about">
 			<div class="container_center">
 				<div class="about__in">
 					<div class="about__text">
@@ -105,7 +107,7 @@
 				</div>
 			</div>
 		</div><!-- .about-->
-	
+
 		<div class="reason">
 			<div class="container_center">
 				<h2>почему электросамокат?</h2>
@@ -114,8 +116,8 @@
 						<div class="reason__item">
 							<div class="reason__item_left grid__item">
 								<img src="img/reazon-img1.jpg" alt="">
-								<div class="reason__arrow"></div>
-								<div class="reason__icon"></div>
+								<div class="reason__arrow reason__arrow_right"></div>
+								<div class="reason__icon"><img src="img/i1.svg"></div>
 							</div>
 							<div class="reason__item_right grid__item">
 								<div class="reason__content">
@@ -133,8 +135,8 @@
 							</div>
 							<div class="reason__item_left grid__item">
 								<img src="img/reazon-img2.jpg" alt="">
-								<div class="reason__arrow"></div>
-								<div class="reason__icon"></div>
+								<div class="reason__arrow reason__arrow_left"></div>
+								<div class="reason__icon"><img src="img/i2.svg"></div>
 							</div>
 						</div>
 					</div>
@@ -142,8 +144,8 @@
 						<div class="reason__item reason__right_top">
 							<div class="reason__item_top">
 								<img src="img/reazon-img3.jpg" alt="">
-								<div class="reason__arrow"></div>
-								<div class="reason__icon"></div>
+								<div class="reason__arrow reason__arrow_bottom"></div>
+								<div class="reason__icon"><img src="img/i3.svg"></div>
 							</div>
 						</div>
 						<div class="reason__item reason__right_bottom">
@@ -158,99 +160,99 @@
 				</div>
 			</div>
 		</div><!-- .reason-->
+	</div>
 
-		<div id="tarif" class="rates">
-			<div class="container_center">
-				<h2>тарифы</h2>
-				<div class="rates__list">
-					<div class="rates__list_grid grid grid__3">
-						<div class="rates__item">
-							<div class="rates__wrap">
-								<h4>Базовый</h4>
-								<div class="rates__name"> “5 минут”</div>
-								<p>5 минут - 50 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
-							</div>
+	<div id="tarif" class="rates">
+		<div class="container_center">
+			<h2>тарифы</h2>
+			<div class="rates__list">
+				<div class="rates__list_grid grid grid__3">
+					<div class="rates__item">
+						<div class="rates__wrap">
+							<h4>Базовый</h4>
+							<div class="rates__name"> “5 минут”</div>
+							<p>5 минут - 50 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
 						</div>
-						<div class="rates__item">
-							<div class="rates__wrap">
-								<h4>Базовый</h4>
-								<div class="rates__name"> “30 минут”</div>
-								<p>30 минут - 300 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
-							</div>
+					</div>
+					<div class="rates__item">
+						<div class="rates__wrap">
+							<h4>Базовый</h4>
+							<div class="rates__name"> “30 минут”</div>
+							<p>30 минут - 300 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
 						</div>
-						<div class="rates__item">
-							<div class="rates__wrap">
-								<h4>Базовый</h4>
-								<div class="rates__name"> “60 минут”</div>
-								<p>60 минут - 600 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
-							</div>
+					</div>
+					<div class="rates__item">
+						<div class="rates__wrap">
+							<h4>Базовый</h4>
+							<div class="rates__name"> “60 минут”</div>
+							<p>60 минут - 600 рублей, за каждую минуту сверх оплаченного времени  - 10 рублей</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- .rates-->
+		</div>
+	</div><!-- .rates-->
 
-		<div id="jobs" class="jobs">
-			<div class="container_center">
-				<h2>как это работает?</h2>
-				<div class="jobs__wrap">
-					<div class="jobs__strip">
-						<div class="jobs__hstrip"></div>
-						<div class="jobs__list grid grid__4">
-							<div class="jobs__item">
-								<div class="jobs__step">
-									1
-									<div class="jobs__vstrip"></div>
-								</div>
-								<div class="jobs__img_wrap">
-									<div class="jobs__img">
-										<img src="img/i4.svg" alt="" class="jobs__img_img">
-									</div>							
-								</div>
-								<div class="jobs__p">Скачать мобильное приложение</div>
+	<div id="jobs" class="jobs">
+		<div class="container_center">
+			<h2>как это работает?</h2>
+			<div class="jobs__wrap">
+				<div class="jobs__strip">
+					<div class="jobs__hstrip"></div>
+					<div class="jobs__list grid grid__4">
+						<div class="jobs__item">
+							<div class="jobs__step">
+								1
+								<div class="jobs__vstrip"></div>
 							</div>
-							<div class="jobs__item">
-								<div class="jobs__step">
-									2
-									<div class="jobs__vstrip"></div>
-								</div>
-								<div class="jobs__img_wrap">
-									<div class="jobs__img">
-										<img src="img/i5.svg" alt="" class="jobs__img_img">
-									</div>							
-								</div>
-								<div class="jobs__p">Пройти регистрацию</div>
+							<div class="jobs__img_wrap">
+								<div class="jobs__img">
+									<img src="img/i4.svg" alt="" class="jobs__img_img">
+								</div>							
 							</div>
-							<div class="jobs__item">
-								<div class="jobs__step">
-									3
-									<div class="jobs__vstrip"></div>
-								</div>
-								<div class="jobs__img_wrap">
-									<div class="jobs__img">
-										<img src="img/i6.svg" alt="" class="jobs__img_img">
-									</div>							
-								</div>
-								<div class="jobs__p">Найти место расположения ближайших станций проката</div>
+							<div class="jobs__p">Скачать мобильное приложение</div>
+						</div>
+						<div class="jobs__item">
+							<div class="jobs__step">
+								2
+								<div class="jobs__vstrip"></div>
 							</div>
-							<div class="jobs__item">
-								<div class="jobs__step">
-									4
-									<div class="jobs__vstrip"></div>
-								</div>
-								<div class="jobs__img_wrap">
-									<div class="jobs__img">
-										<img src="img/i7.svg" alt="" class="jobs__img_img">
-									</div>							
-								</div>
-								<div class="jobs__p">Наслаждаться прогулкой</div>
+							<div class="jobs__img_wrap">
+								<div class="jobs__img">
+									<img src="img/i5.svg" alt="" class="jobs__img_img">
+								</div>							
 							</div>
+							<div class="jobs__p">Пройти регистрацию</div>
+						</div>
+						<div class="jobs__item">
+							<div class="jobs__step">
+								3
+								<div class="jobs__vstrip"></div>
+							</div>
+							<div class="jobs__img_wrap">
+								<div class="jobs__img">
+									<img src="img/i6.svg" alt="" class="jobs__img_img">
+								</div>							
+							</div>
+							<div class="jobs__p">Найти место расположения ближайших станций проката</div>
+						</div>
+						<div class="jobs__item">
+							<div class="jobs__step">
+								4
+								<div class="jobs__vstrip"></div>
+							</div>
+							<div class="jobs__img_wrap">
+								<div class="jobs__img">
+									<img src="img/i7.svg" alt="" class="jobs__img_img">
+								</div>							
+							</div>
+							<div class="jobs__p">Наслаждаться прогулкой</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- .jobs-->
-
+		</div>
+	
 		<div class="container_center">
 
 			<div class="travel">
@@ -260,7 +262,7 @@
 						<div class="travel__item">
 							<a href="agreement.html" class="travel__btn btn">договор</a>
 						</div>
-						<div class="travel__item">
+						<!-- <div class="travel__item">
 							<a href="#" class="travel__btn btn download__menu_trigger">Приложения <br>к договору <img src="img/caret.svg" alt="" class="caret"></a>
 							<ul class="download__menu">
 								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 1</a></li>
@@ -268,9 +270,9 @@
 								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 3</a></li>
 								<li class="download__menu_item"><a href="#" class="download__menu_link">Приложение 4</a></li>
 							</ul>
-						</div>
+						</div> -->
 						<div class="travel__item">
-							<a href="#" class="travel__btn btn">Инструкция <br>Ninebot KickScooter</a>
+							<a href="guide.html" class="travel__btn btn">Инструкция <br>Ninebot KickScooter</a>
 						</div>
 						<div class="travel__item">
 							<a href="#" class="travel__btn btn">Вопросы <br>и ответы</a>
@@ -281,6 +283,9 @@
 		
 		</div>
 
+	</div><!-- .jobs-->
+	
+	<div id="map-box">
 		<div class="map">
 			<div id="map" class="map__wrap"></div>
 			<h2 class="map__h2">карта станций проката</h2>
@@ -290,16 +295,18 @@
 			</div>
 		</div><!-- .map-->
 
-		<div class="container_center">
+	</div>
 
-			<div class="schedule">
+	<div id="contact">
+		<div class="schedule">
+	
+			<div class="container_center">
 				<div class="schedule__p">Станции проката электросамокатов работают ежедневно 24 часа в сутки.</div>
 				<div class="schedule__p">Работа станций проката приостанавливается при снижении температуры окружающей среды ниже 10 градусов Цельсия.</div>
 			</div><!-- .schedule-->
 
 		</div>
-
-		<div id="contact" class="write">
+		<div class="write">
 			<div class="container_center">
 				<div class="write__in">
 					<form class="write__form">
@@ -311,10 +318,8 @@
 					</form>
 				</div>
 			</div>
-		</div><!-- .write-->
-
-	</main>
-	<!-- end main__content -->
+		</div>
+	</div><!-- .write-->
 
 </div>
 <!-- end .wrapper -->

@@ -33,28 +33,9 @@ $(document).ready(function() {
 		document.documentElement.setAttribute('data-browser', 'not-flex');
 	}
 
-	// First screen full height
-	function setHeiHeight() {
-	    $('.full__height').css({
-	        minHeight: $(window).height() + 'px'
-	    });
-	}
-	setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-	$(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
-
-
 	// Reset link whte attribute href="#"
 	$('[href*="#"]').click(function(event) {
 		event.preventDefault();
-	});
-
-	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	$('.navbar__link').click( function(){ 
-		var scroll_el = $(this).attr('href'); 
-		if ($(scroll_el).length != 0) {
-		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-		}
-		return false;
 	});
 
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -62,14 +43,28 @@ $(document).ready(function() {
         var HeaderTop = $('#header').offset().top;
         
         $(window).scroll(function(){
-                if( $(window).scrollTop() > HeaderTop ) {
-                        $('#header').addClass('stiky');
-                } else {
-                        $('#header').removeClass('stiky');
-                }
+            if( $(window).scrollTop() > HeaderTop ) {
+                $('#header').addClass('stiky');
+            } else {
+                $('#header').removeClass('stiky');
+            }
         });
     });
-   	// setGridMatch($('[data-grid-match] .grid__item'));
+
+	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
+	$('.navbar__link').click( function(){ 
+		var scroll_el = $(this).attr('href'); 
+		if ($(scroll_el).length != 0) {
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top -30 }, 500);
+		}
+		if ($('.header__menu_right').hasClass('open')) {
+			$('.header__menu_right').removeClass('open');
+		}
+		return false;
+	});
+
+	// Переключение пунктов меню при скролле
+   	$(document).on("scroll", onScroll);
 
 
    	// Мобильное меню header__menu_right
@@ -87,8 +82,22 @@ $(document).ready(function() {
 	// Всплывающая регистрация в шапке
     $('.header__down_reg_btn').on('click touchend', function(event) {
     	event.preventDefault();
-		$('.header__sighup').toggleClass('open');
+		$('.header__sighup').addClass('open');
 	});
+	$('.header__sighup .close').on('click', function(event) {
+		event.preventDefault();
+		$('.header__sighup').removeClass('open');
+	});
+
+	if (isXsWidth()) {
+		$('body').on('click', '.map__list_title', function() {
+			$('.map__list').toggleClass('open');
+		});
+		$('body').on('click', '.map__link', function() {
+			$('.map__list').removeClass('open');
+		});
+	}
+
 });
 
 $(window).resize(function(event) {
@@ -96,27 +105,20 @@ $(window).resize(function(event) {
 });
 
 function checkOnResize() {
-   	// setGridMatch($('[data-grid-match] .grid__item'));
-   	// gridMatch();
 }
 
-// function gridMatch() {
-//    	$('[data-grid-match] .grid__item').matchHeight({
-//    		byRow: true,
-//    		property: 'height',
-//    	});
-// }
+var menu_selector = ".navbar"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню. 
+function onScroll(){
+	var scroll_top = $(document).scrollTop();
+	$(menu_selector + " a").each(function(){
+		var hash = $(this).attr("href");
+		var target = $(hash);
+		if (target.position().top - 40 <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+			$(menu_selector + " a.active").removeClass("active");
+			$(this).addClass("active");
+		} else {
+			$(this).removeClass("active");
+		}
+	});
+}
 
-// function setGridMatch(columns) {
-// 	var tallestcolumn = 0;
-// 	columns.removeAttr('style');
-// 	columns.each( function() {
-// 		currentHeight = $(this).height();
-// 		if(currentHeight > tallestcolumn) {
-// 			tallestcolumn = currentHeight;
-// 		}
-// 	});
-// 	setTimeout(function() {
-// 		columns.css('minHeight', tallestcolumn -2);
-// 	}, 100);
-// }
